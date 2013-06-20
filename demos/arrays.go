@@ -10,6 +10,7 @@ func main() {
     cities[1] = "Gotham"
     cities[2] = "Philadelphia"
     fmt.Println(cities)
+    // This kills the program...
     //cities[3] = "Metropolis"
 
     numbers := [3]int{4,5,6}
