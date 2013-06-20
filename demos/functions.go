@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func double(prodA, prodB int) int {
+func multiply(prodA, prodB int) int {
 
-	return prodA, prodB
+	return prodA * prodB
 
 }
 
@@ -12,5 +12,5 @@ func main() {
 
 	factor := 5
 
-	fmt.Println(double(factor))
+	fmt.Println(multiply(factor, 7))
 }

@@ -17,16 +17,11 @@ func multiplyProducts(prods products) int {
 //
 //}
 
-func double(factor int) int {
-
-	return factor * 2
-
-}
-
 func main() {
 
 	myProds := products{4, 5}
 	fmt.Println(multiplyProducts(myProds))
+    // Call multiply on the type
     //fmt.Println(myProds.multiply())
 
 }
