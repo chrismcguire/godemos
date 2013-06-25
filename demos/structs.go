@@ -1,18 +1,24 @@
+// Structs
+
+// No objects
+// Structs: collections of fields
+// Like c structs
+
 package main
 
 import "fmt"
 
-type products struct {
-	prodA, prodB int
+type factors struct {
+	factorA, factorB int
 }
 
-func multiplyProducts(prods products) int {
-	return prods.prodA * prods.prodB
+func multiplyFactors(facts factors) int {
+	return facts.factorA * facts.factorB
 }
 
 func main() {
 
-	myProds := products{4, 5}
-	fmt.Println(multiplyProducts(myProds))
+	myFactors := factors{4, 5}
+	fmt.Println(multiplyFactors(myFactors))
 
 }

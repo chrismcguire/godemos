@@ -1,3 +1,5 @@
+// Interfaces
+
 package main
 
 import "fmt"
@@ -40,7 +42,5 @@ func main() {
 
     printMult(&myString)
     printMult(&myProds)
-
-    //fmt.Println(myProds.multiply())
 
 }

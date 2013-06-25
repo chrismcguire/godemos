@@ -1,3 +1,5 @@
+// Custom Types
+
 package main
 
 import "fmt"
@@ -11,17 +13,17 @@ func multiplyProducts(prods products) int {
 }
 
 ////Define a receiver for the function
-//func (prods *products) multiply() int {
-//
-//    return prods.prodA * prods.prodB
-//
-//}
+func (prods *products) multiply() int {
+
+    return prods.prodA * prods.prodB
+
+}
 
 func main() {
 
 	myProds := products{4, 5}
 	fmt.Println(multiplyProducts(myProds))
     // Call multiply on the type
-    //fmt.Println(myProds.multiply())
+    fmt.Println(myProds.multiply())
 
 }

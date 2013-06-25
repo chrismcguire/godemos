@@ -16,7 +16,6 @@ type Multiplier interface {
     Multiply() string
 }
 
-
 func (prods *IntProducts) Multiply() string {
     product := prods.ProdA * prods.ProdB
     return strconv.Itoa(product)
