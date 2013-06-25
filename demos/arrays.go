@@ -43,8 +43,8 @@ func main() {
 //    legs["human"] = 2
 //    legs["insect"] = 6
 //    legs["chair"] = 4
-//    fmt.Println(my_map)
-//    delete(my_map, "chair")
-//    fmt.Println(my_map)
+//    fmt.Println(legs)
+//    delete(legs, "chair")
+//    fmt.Println(legs)
 
 }
