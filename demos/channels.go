@@ -13,27 +13,30 @@ import "time"
 
 func pingpong(value string, channel chan *int) {
 
-    for {
-        // Block while waiting to read
-        input := <-channel
-        fmt.Println(value)
-        time.Sleep(100 * time.Millisecond)
-        // Block while waiting for another process to read.
-        channel <- input
-    }
+	for {
+		// Block while waiting to read
+		input := <-channel
+		fmt.Println(value)
+		time.Sleep(100 * time.Millisecond)
+		// Block while waiting for another process to read.
+		channel <- input
+	}
 
 }
 
 func main() {
-    // Create a new int channel
-    channel := make(chan *int)
+	// Create a new int channel
+	channel := make(chan *int)
 
-    go pingpong("ping", channel)
-    go pingpong("pong", channel)
-    
-    // Write a value to the channel
-    gameOn := 1
-    channel <- &gameOn
+	go pingpong("ping", channel)
+	go pingpong("pong", channel)
 
-    time.Sleep(1000 * time.Millisecond)
+	// Write a value to the channel
+	gameOn := 1
+	channel <- &gameOn
+
+	// Deadlock detection (comment out 35 & 36)
+	//    <-channel
+
+	time.Sleep(1000 * time.Millisecond)
 }
