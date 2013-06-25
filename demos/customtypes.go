@@ -1,29 +1,26 @@
-// Custom Types
+// Methods
+
 
 package main
 
 import "fmt"
 
-type products struct {
-	prodA, prodB int
+type factors struct {
+	factorA, factorB int
 }
 
-func multiplyProducts(prods products) int {
-	return prods.prodA * prods.prodB
-}
+// Define a receiver for the function
+func (facts *factors) multiply() int {
+// Don't need the pointer to products, but use it most of the time (don't have to copy)
 
-////Define a receiver for the function
-func (prods *products) multiply() int {
-
-    return prods.prodA * prods.prodB
+    return facts.factorA * facts.factorB
 
 }
 
 func main() {
 
-	myProds := products{4, 5}
-	fmt.Println(multiplyProducts(myProds))
+	myFactors := factors{4, 5}
     // Call multiply on the type
-    fmt.Println(myProds.multiply())
+    fmt.Println(myFactors.multiply())
 
 }
